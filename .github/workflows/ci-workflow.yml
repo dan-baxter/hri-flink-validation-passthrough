@@ -51,13 +51,3 @@ jobs:
         if: github.ref == 'refs/heads/WHFHRI-693-test' && env.github_event_name == 'workflow_dispatch'
         run: |
           echo "TEST 2"
-
-      - name: Test 3
-        if: github.ref == 'refs/heads/WHFHRI-693-test' && env.GITHUB_EVENT_NAME == "workflow_dispatch"
-        run: |
-          echo "TEST 3"
-
-      - name: Test 4
-        if: github.ref == 'refs/heads/WHFHRI-693-test' && env.github_event_name == "workflow_dispatch"
-        run: |
-          echo "TEST 4"
