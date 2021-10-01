@@ -50,8 +50,3 @@ jobs:
         if: ${{ github.ref == 'refs/heads/WHFHRI-693-test' && env.GITHUB_EVENT_NAME == 'workflow_dispatch' }}
         run: |
           echo "TEST 1"
-
-      - name: Test 2
-        if: ${{github.ref == 'refs/heads/WHFHRI-693-test'} && { env.github_event_name == 'workflow_dispatch' }}
-        run: |
-          echo "TEST 2"
