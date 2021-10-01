@@ -47,6 +47,11 @@ jobs:
           echo "GITHUB_EVENT_NAME = $GITHUB_EVENT_NAME"
 
       - name: Test 1
-        if: env.GITHUB_EVENT_NAME == 'workflow_dispatch'
+        if: $GITHUB_EVENT_NAME == 'workflow_dispatch'
         run: |
           echo "TEST 1"
+
+      - name: Test 2
+        if: $GITHUB_EVENT_NAME == 'push'
+        run: |
+          echo "TEST 2"
